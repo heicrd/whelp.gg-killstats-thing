@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'/>
+        <title>Placeholder</title>
+    </head>
+    <body>
+        <h2>Kill TZs:</h2>
+        <ul>
+            {% for i in st %}
+            <li>{{ i[0] }}: {{ i[1] }}</li>
+            {% end %}
+        </ul>
+        <h2>Kill Systems:</h2>
+        <ul>
+            {% for i in sd %}
+            <li>{{ i[0] }}: {{ i[1] }}</li>
+            {% end %}
+        </ul>
+    </body>
+</html>
