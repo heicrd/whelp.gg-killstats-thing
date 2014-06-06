@@ -2,16 +2,21 @@
 <html>
     <head>
         <meta charset='utf-8'/>
-        <title>Placeholder</title>
+        <title>{{name}}</title>
     </head>
     <body>
-        <h2>Kill TZs:</h2>
+        <form action='/search' method='get'>
+            <input type='text' name='query'/>
+            <input type='submit' value='search'/>
+        </form>
+        <h2>{{name}}</h2>
+        <h3>Kill TZs:</h3>
         <ul>
             {% for i in st %}
             <li>{{ i[0] }}: {{ i[1] }}</li>
             {% end %}
         </ul>
-        <h2>Kill Systems:</h2>
+        <h3>Kill Systems:</h3>
         <ul>
             {% for i in sd %}
             <li>{{ i[0] }}: {{ i[1] }}</li>
