@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'/>
+        <title>Search Results</title>
+    </head>
+    <body>
+        <form action='/search' method='get'>
+            <input type='text' name='query'/>
+            <input type='submit' value='search'/>
+        </form>
+        <h2>Results:</h2>
+        <h3>Corps:</h3>
+        <ol>
+            {% for i in j['corporations'] %}
+            <li><a href="corporation/{{i['corporation_id']}}">{{i['corporation_name']}}</a></li>
+            {% end %}
+        </ol>
+        <h3>Alliances:</h3>
+        <ol>
+            {% for i in j['alliances'] %}
+            <li><a href="alliance/{{i['alliance_id']}}">{{i['alliance_name']}}</a></li>
+            {% end %}
+        </ol>
+        <h3>Characters:</h3>
+        <ol>
+            {% for i in j['characters'] %}
+            <li><a href="character/{{i['character_id']}}">{{i['character_name']}}</a></li>
+            {% end %}
+        </ol>
+    </body>
+</html>
